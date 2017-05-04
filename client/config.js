@@ -3,7 +3,8 @@
  */
 
 // 主机域名
-var host = '15178378.t-otaku.com';
+// var host = '15178378.t-otaku.com';
+var host = 'localhost:8080';
 
 var config = {
 

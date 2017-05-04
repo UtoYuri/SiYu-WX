@@ -121,7 +121,7 @@ Page({
         icon: 'loading',
         duration: 1000
       });
-      return;
+      // return;
     }
     wx.showToast({
       title: '千里传声',
@@ -129,7 +129,8 @@ Page({
       duration: 60000
     });
     whisper.uploadFile({
-      url: config.service.whisperUrl + '/session='+whisper.getSession().session+'&tag='+tag+'&duration='+$this.data.duration,
+      url: config.service.whisperUrl + '/session=123&tag=123&duration=1000',
+      // url: config.service.whisperUrl + '/session='+whisper.getSession().session+'&tag='+tag+'&duration='+$this.data.duration,
       filePath: src,
       name: 'whisper',
       success: function(res){
@@ -143,6 +144,7 @@ Page({
         }, 2000);
       },
       fail: function(res){
+        console.log(res)
         wx.hideToast();
         setTimeout(function(){
           wx.showToast({

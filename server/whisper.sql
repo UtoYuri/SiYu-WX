@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017-04-24 10:25:28
+-- Generation Time: 2017-05-04 14:24:33
 -- 服务器版本： 5.6.26-log
 -- PHP Version: 5.4.45
 
@@ -76,7 +76,8 @@ CREATE TABLE IF NOT EXISTS `t_whisper` (
   `duration` int(11) NOT NULL,
   `tag` varchar(24) NOT NULL,
   `src` varchar(200) NOT NULL,
-  `post_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `post_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_valid` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
